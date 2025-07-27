@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
+    <title>El Feed de Instagram</title>
+
+    <style>
+        #galeria .col-4 {
+            padding: 10px;
+            margin: 0 !important;
+            gap: 0 !important;
+        }
+        #galeria img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            margin: 0 !important;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card-body-header {
+            margin-left: 0;
+            margin-right: 0;
+            padding: 10px 5px 5px 5px;
+        }
+        .card-body-footer {
+            padding: 5px 5px 15px 5px;
+        }
+    </style>
+
+</head>
+
+<body style="font-size: 13px">
+    <nav class="navbar bg-body-tertiary px-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://img.icons8.com/?size=512&id=44907&format=png" alt="Logo" width="30" height="30"
+                    class="d-inline-block align-text-top">
+                Instagram
+            </a>
+            <div class="d-flex gap-2">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-whatever="@mdo">Create a new post</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body p-3 pb-4">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">Caption:</label>
+                                        <textarea class="form-control" id="message-text"
+                                            placeholder="Add the cation of your post here"></textarea>
+                                    </div>
+                                </form>
+                                <div class="d-flex gap-2">
+                                    <button type="button" class="btn btn-light btn-outline-secondary text-dark"><i
+                                            class="fa-solid fa-camera"></i></button>
+                                    <button type="button" class="btn btn-light btn-outline-secondary text-dark"><i
+                                            class="fa-solid fa-location-dot"></i></button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button">Profile</button></li>
+                        <li><button class="dropdown-item" type="button">Accesibility</button></li>
+                        <li><button class="dropdown-item" type="button">Privacy and Data</button></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="d-flex justify-content-center p-2" id="nav-tab-pills">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true"><i class="fa-solid fa-square-poll-horizontal"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false"><i class="fa-solid fa-square"></i></button>
+                </li>
+            </ul>
+
+        </div>
+        <div class="d-flex justify-content-center" id="pills-tabContent">
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                    <div id="galeria" class="container">
+                        <div class="row ustify-content-lg-center">
+                            <div class="col-4" ><img src="https://plus.unsplash.com/premium_photo-1753364509615-d1aa4d1d4268?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"></div>
+                            <div class="col-4"><img src="https://plus.unsplash.com/premium_photo-1677661620509-b05f7a068d31?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"></div>
+                            <div class="col-4"><img src="https://plus.unsplash.com/premium_photo-1731675875948-67be8cac73f8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"></div>
+                            <div class="col-4"><img src="https://images.unsplash.com/photo-1753191326444-f00046939b59?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"></div>
+                            <div class="col-4"><img src="https://images.unsplash.com/photo-1753114767610-75bc913c8423?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"></div>
+                            <div class="col-4"><img src="https://plus.unsplash.com/premium_photo-1739831741646-f5f11298d3c3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"></div>
+                            <div class="col-4"><img src="https://plus.unsplash.com/premium_photo-1724697321773-a86c14998ec2?q=80&w=716&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"></div>
+                            <div class="col-4"><img src="https://plus.unsplash.com/premium_photo-1671379529862-903122db66cf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"></div>
+                            <div class="col-4"><img src="https://plus.unsplash.com/premium_photo-1672076780330-ae81962ee3ce?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade show active d-flex justify-content-center" id="pills-profile" role="tabpanel"
+                    aria-labelledby="pills-posts">
+                    <section id="Posts" class="container">
+
+                        <div class="card rounded-1 shadow-sm p-0 m-1 mb-3 bg-body" style="width: 18rem;" id="Post1">
+                            <div class="bg-white">
+                                <div class="card-body-header d-flex justify justify-content-between"
+                                    <p>
+                                        <h6>Trip to Asia!</h6>
+                                    </p>
+                                    <p>08/26</p>
+                                </div>
+                            </div>
+
+                            <img class="rounded-0 m-0 p-0"
+                                src="https://images.unsplash.com/photo-1578987168249-1555d1eb2e0f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top" alt="...">
+                            <div class="card-body-footer">
+                                <p class="m-0"><strong>204 Likes</strong></p>
+                                <p class="card-text">This is an example of a very good photo you can post on
+                                    Instagram</p>
+                            </div>
+                        </div>
+
+                        <div class="card rounded-1 shadow-sm p-0 m-1 mb-3 bg-body" style="width: 18rem;" id="Post2">
+                            <div class="bg-white">
+                                <div class="card-body-header d-flex justify justify-content-between"
+                                    <p>
+                                        <h6>The only limit is your imaginaton...</h6>
+                                    </p>
+                                    <p>10/26</p>
+                                </div>
+                            </div>
+                            
+                            <img class="rounded-0 m-0 p-0"
+                                src="https://plus.unsplash.com/premium_photo-1731859412728-525a1e53cbad?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top" alt="...">
+                            <div class="card-body-footer">
+                                <p class="m-0"><strong>2,354 Likes</strong></p>
+                                <p class="card-text">This is an example of a very good photo you can post on
+                                    Instagram</p>
+                            </div>
+                        </div>
+
+                        <div class="card rounded-1 shadow-sm p-0 m-1 mb-3 bg-body" style="width: 18rem;" id="Post3">
+                            <div class="bg-white">
+                                <div class="card-body-header d-flex justify justify-content-between"
+                                    <p>
+                                        <h6>Give yourself a present everyday :) !</h6>
+                                    </p>
+                                    <p>19/26</p>
+                                </div>
+                            </div>
+                            
+                            <img class="rounded-0 m-0 p-0"
+                                src="https://plus.unsplash.com/premium_photo-1670684184231-f0fa3a9fc37e?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top" alt="...">
+                            <div class="card-body-footer">
+                                <p class="m-0"><strong>1,328 Likes</strong></p>
+                                <p class="card-text">This is an example of a very good photo you can post on
+                                    Instagram and also some delicious coffee...</p>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
